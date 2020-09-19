@@ -3,9 +3,17 @@ h1{
     
 }
 #main{
-    height: 100px;
+    height: 600px;
     width: 500px;
     align-items: center;
     margin-left: 32%;
-    margin-top: 50px;
+    margin-top: 10px;
+    border-style: solid;
+}
+#message{
+    height: 500px;
+    width: 500px;
+    align-items: center;
+    border-style:dashed;
+
 }
