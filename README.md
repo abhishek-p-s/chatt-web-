@@ -4,3 +4,7 @@ aim of this project is building digital classrooms such as students can discuss 
 login page
 
 ![image](https://user-images.githubusercontent.com/70889088/93694381-ab559e00-fb28-11ea-8bef-48577a341596.png)
+
+new registration page
+
+![image](https://user-images.githubusercontent.com/70889088/93694406-1901ca00-fb29-11ea-80e4-0035de51751d.png)
