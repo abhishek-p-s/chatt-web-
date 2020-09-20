@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -12,7 +12,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <title>login page</title>
 </head>
-<body>
+<body class="bg-info">
 <?php
 session_start();
 require_once("connection.php");
@@ -49,8 +49,9 @@ require_once("connection.php");
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" placeholder="Password" name="password">
   </div>
-
-  <button type="submit" class="btn btn-primary" name="login">Submit</button>
+<div class="text-center">
+  <button type="submit" class="btn bg-success" name="login">Submit</button>
+  <a class="btn bg-success" href="registration.php">create your account</a>
 </form></div>
 </body>
 </html>

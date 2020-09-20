@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="stylesheet" href="css.css">
+<link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
  <!-- CSS only -->
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -10,17 +12,32 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    
     
     <title>chatt app</title>
 </head>
-<body>
+<body  class="bg-info">
+
   <?php
   session_start();
   if(isset($_SESSION['userName'])){
 
-    echo'welcome  '. $_SESSION['userName'];
-    echo '<br><a href="login.php">log out</a>';
+   
+    echo '<header class="bg-success" >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+           
+          </li>
+          <li class="nav-item active">';
+          echo'<h1> '. $_SESSION['userName'].'</h1>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    </header>';
+    echo' <a class="btn bg-success" href="logout.php">log out your account</a>';
+   
 
   }
   else{
@@ -33,7 +50,22 @@
   <div id="message">
 
   <?php
-  include("connection.php");
+
+include("connection.php");
+
+  $query="select * from message";
+  $result=mysqli_query($con,$query);
+  while($row=mysqli_fetch_assoc($result)){
+    $message=$row['message'];
+    $userName=$row['userName'];
+    echo '<h5 style="color:green">'.$userName.'</h5>';	
+    echo '<p>'.$message.'</p>';
+    echo'<hr>';
+
+  }
+
+
+ 
 
   if(isset($_POST['login'])){
 
@@ -63,7 +95,8 @@
   <form method="post">
   <div class="form-group">
     <input type="text" class="form-control" height="50px" placeholder="type your message here" name="message">
-  <button type="submit" class="btn btn-primary " name="login">Submit</button>
+    <div class="text-center pt-3">
+  <button type="submit" class="btn bg-success pt-2 " name="login">Submit</button></div>
 </form></div>
   
   </div>

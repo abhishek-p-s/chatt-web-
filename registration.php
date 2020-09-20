@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css.css">
     <!-- CSS only -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -13,7 +13,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <title>Registration</title>
 </head>
-<body>
+<body class="bg-info">
     <?php
 
     require_once("connection.php");
@@ -65,8 +65,9 @@
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" placeholder="Password" name="password">
   </div>
- 
-  <button type="submit" class="btn btn-primary " name="register">Submit</button>
+ <div class="text-center">
+  <button type="submit" class="btn bg-success " name="register">Submit</button>
+  <a class="btn bg-success" href="login.php">login your account</a></div>
 </form>
 
 </div>

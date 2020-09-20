@@ -7,13 +7,17 @@ h1{
     width: 500px;
     align-items: center;
     margin-left: 32%;
-    margin-top: 10px;
-    border-style: solid;
+    margin-top: 15px;
+    font-family: 'Ranchers', cursive;
+    
+  
 }
 #message{
     height: 500px;
     width: 500px;
     align-items: center;
-    border-style:dashed;
+    padding-left: 5px;
+    
+   
 
 }
